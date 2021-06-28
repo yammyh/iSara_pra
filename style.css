@@ -2,24 +2,34 @@
 body{
 	line-height: 2;
 	letter-spacing: 1.2px;
+	box-sizing: border-box;
 }
 header{
-	height:100px;
+	width: 100%;
+	position:fixed;
+	background: #fff;
+	z-index: 10;
 }
 .wrapper{
-	width:1460px;
+	max-width:0.76vw;
 	margin:0 auto;
+	padding:0 23%;
+}
+.catch{
+	margin:0 auto;
+	vertical-align: center;
 }
 
 .header{
-	max-width: 1170px;
-	padding:25px 0;
+	max-width: 1460px;
+	padding:10px 0;
 	position:relative;
 	margin:0 auto;
 }
 .logo{
 	width:168px;
 	display: inline-block;
+	padding-left:4%;
 }
 .sub-title{
 	display: inline-block;
@@ -28,21 +38,25 @@ header{
 	font-weight:600;
 }
 .header p{
-	font-size:14px;
+	font-size:0.87rem;
 	vertical-align: bottom;
 }
-header .btn{
+header .screen{
 	display: inline-block;
 	color:white;
 	background:#da6b64;
-	padding:15px 45px;
+	padding:10px 45px;
 	text-align: center;
     border-radius: 30px;
 	position:absolute;
 	right:0px;
 }
-.btn:hover{
+header .btn:hover{
 	cursor:pointer;
+	background: #d84940;
+}
+.menu{
+	display: none;
 }
 
 /*------------CATCH-----------*/
@@ -52,21 +66,23 @@ header .btn{
 	background-position: 
 		center 0;
 	 background-attachment: fixed;
+	padding-top:100px;
 }
 .textl{
-	font-size:28px;
+	font-size:1.75rem;
 	font-weight: 600;
 }
 .catch .textl{
 	padding:100px 0 50px 0;
 }
 .textm{
-	font-size:21px;
+	font-size:1.3rem;
 	font-weight: 600;
 }
 .catch .textm{
 	padding:50px 0 100px 0;
 }
+
 
 /*--------DETAIL---------*/
 .detail{
@@ -91,6 +107,9 @@ header .btn{
     border-radius: 40px;
 	margin:30px auto;
 }
+.detail .btn:hover{
+	background: #d84940;
+}
 .btn_sns{
 	display:inline-block;
 	padding:0 15px;
@@ -98,7 +117,7 @@ header .btn{
 	background: #1877f2;
 	border-radius:5px;
 	cursor: pointer;
-	font-size:14px;
+	font-size:0.87rem;
 }
 .btn_sns .tw{
 	background:#1b95e0;
@@ -110,16 +129,17 @@ header .btn{
 	margin-right:5px;
 }
 
+
 /*--------HOWTO----------*/
 .howto{
 	text-align: center;
 	padding-bottom: 100px;
-	background: url("img/howto_bg.jpg") center;
+	background: url("img/howto_bg.jpg") center top;
 }
 .ttl{
 	margin: 50px auto 50px;
 	position: relative;
-    width: 860px;
+    max-width: 860px;
 }
 h2{
 	text-align: center;
@@ -157,6 +177,7 @@ h2::before{
 	border-bottom:solid 5px #ebb94d;
 }
 
+
 /*--------ABOUT---------*/
 .circle_ttl{
 	color:#fff;
@@ -189,7 +210,7 @@ h2::before{
 	justify-content: center;
 }
 .type_a .item p{
-	font-size: 12px;
+	font-size: 0.75rem;
 	width:110px;
 	text-align: center;}
 .type_a .item{
@@ -197,19 +218,22 @@ h2::before{
 }
 
 .box{
-	max-width: 1460px;
+	max-width: 1170px;
 	background:#fff;
 	border: solid #ebb94d;
 	border-radius: 10px;
 	padding:30px 0;
 	margin:0 auto;
 }
+
+
 /*----------STEP----------*/
 .step{
 	text-align: center;
 	background: url("img/step_bg.jpg") center;
+	background-size:cover;
 	color:#fff;
-	height:617px;
+	min-height:617px;
 }
 .ttlb{
 	padding:100px 0 20px;
@@ -226,6 +250,7 @@ h2::before{
 	font-weight:700;
 	padding:30px;
 	display: flex;
+	flex-wrap:wrap;
 	justify-content: space-around;
 }
 .step_ttl{
@@ -245,7 +270,9 @@ h2::before{
 	color:#000;
 	max-width: 400px;
 	border-radius: 10px;
+	margin-bottom: 10px;
 }
+
 
 /*------learn------*/
 .learn{
@@ -253,9 +280,10 @@ h2::before{
     padding-bottom: 100px;
 }
 .point{
-	display: flex;
-	justify-content: space-between;
-	padding:30px 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px 20%;
 }
 .learn .item{
 	color:#fff;
@@ -264,6 +292,7 @@ h2::before{
 	background:#ebb94d;
 	border-radius:50%;
 	padding-top:10px;
+	margin-bottom: 10px;
 }
 .learn .item p{
 	width: 150px;
@@ -271,6 +300,8 @@ h2::before{
 	line-height: 1.5;
 	font-weight:bold;
 }
+
+
 /*------merit------*/
 .merit{
 	padding-top:50px;
@@ -281,9 +312,12 @@ h2::before{
 .merit .item{
 	padding-bottom: 30px;
 }
+.merit .item img{
+	width: 100%;
+}
 .merit .item p{
 	width:440px;
-	font-size: 21px;
+	font-size: 1.3rem;
 	font-weight:bold;
 	color:#ebb94d;
 	text-align: left;
@@ -298,22 +332,27 @@ h2::before{
 	color:#ebb94d;
 }
 .merit p:nth-child(2){
-	font-size:24px;
+	font-size:1.5rem;
 	font-weight: 700;
 }
+
+
 /*--------MEMBER----------*/
 .member{
 	text-align: center;
 	color:#fff;
-	background:url("img/member_bg.png") center top no-repeat;	
+	background:url("img/member_bg.png") center top;	
+	background-size:cover;
+	margin:0 auto;
 }
 .members{
-	display: flex;
-	justify-content: space-between;
-	padding:50px 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
 }
 .member .item{
-	width: 400px;
+	width: 30%;
 	position:relative;
 }
 .member .item p{
@@ -326,6 +365,8 @@ h2::before{
 	border:solid #fff 1px;
 	padding:50px 20px 30px 20px ;
 }
+
+
 /*----------possible-----------*/
 .possible{
 	text-align: center;
@@ -384,15 +425,17 @@ h2::before{
 }
 .person p{
 	text-align: left;
-	font-size:21px;
+	font-size:1.3rem;
 	font-style: oblique;
 	color:darkgray;
 	padding-left: 30px;
 }
 
+
 /*------LEARN-DTAIL-------*/
 .learn-detail{
-	text-align: center;		background:url("img/member_bg.png") center top no-repeat;	
+	text-align: center;		background:url("img/member_bg.png") center top no-repeat;
+	background-size: cover;
 }
 .learn-detail .ttlb{
 	color:#fff;
@@ -406,7 +449,7 @@ h2::before{
 	border-radius: 10px;
 	border: 5px solid #016ea9;
 	width: 450px;
-	margin:0 25px;
+	margin:10px auto;
 	background:#fff;
 }
 .lb-ttl{
@@ -424,6 +467,8 @@ h2::before{
 	bordes-bottom: none;
 	border-radius:0 0 10px 10px;
 }
+
+
 /*------------FLOW---------*/
 .flow{
 	text-align: center;
@@ -434,19 +479,20 @@ h2::before{
 	flex-wrap: wrap;
 }
 .flow-box{
-	width:1200px;
-	display: flex;
-	line-height:1.5;
-	padding:30px 50px;
-	background: #fff9da;
-	border-radius: 10px;
+    max-width: 1170px;
+    margin: 0 4%;
+    display: flex;
+    line-height: 1.5;
+    padding: 30px 50px;
+    background: #fff9da;
+    border-radius: 10px;
 }
 .left{
 	padding:20px;
 }
 .left p{
 	width:300px;
-	font-size:24px;
+	font-size:1.5rem;
 	font-weight:700;
 }
 .flow-box:nth-child(2) img{
@@ -456,5 +502,285 @@ h2::before{
 	text-align: left;
 }
 .right p{
+	padding:20px 0;
+	font-size:18px;
+}
+
+
+/*----------why---------*/
+.why h2{
+	font-size:1.75rem;
+	font-weight: 700;
+	text-align: left;
+}
+.why{
+	color:#fff;
+	text-align: left;
+	background: url( "img/why_bg.jpg") center bottom;
+	padding:80px;
+	margin-top:50px;
+}
+
+.why li{
+	line-height: 2;
+}
+/*--------benefit---------*/
+.benefit{
+	padding:50px 0;
+	text-align: center;
+	background: #f7c04b;
+}
+.benefit h2{
+	font-size:1.75rem;
+	font-weight: 700;;
+}
+.benefit span{
+	color:#fff;
+}
+
+.benefit .ttl{
+	width: 500px;
+	padding:0 50px;
+	margin-bottom: -30px;
+	 align-items: center;
+	line-height:1.2;
+	font-size:1.75rem;
+	font-weight: 500;
+	background-color: #f7c04b;
+}
+.bene-ttl{
+	padding-top:30px; 
+	font-size: 1.75rem;
+	color: #f7c04b;
+	margin:0 auto;
+}
+.benefit .items{
+	max-width: 1200px;
+	margin:0 auto;
+	padding:60px 0 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	border:solid 2px #fff;
+}
+.benefit .item{
+	background: #fff;
+	width: 280px;
+	height: 280px;
+	border-radius:50%;
+	margin: 0 auto 10px;
+}
+.benefit .item .content{
+	width: 230px;
+	line-height: 1.5;
+	font-weight: 700;
+	padding-top:10px;
+	margin: 0 auto;
+}
+
+
+/*----------NOT-VOLUNTEER-----*/
+.not-volunteer{
+	padding:50px 0;
+	text-align: center;
+	background:  #4F4F4F;
+	color:#fff;
+}
+.not-volunteer h2::before{
+	border-top:solid 5px #fff;
+	border-left: solid 5px #fff;
+}
+.not-volunteer h2::after{
+	border-bottom:solid 5px #fff;
+	border-right: solid 5px #fff;
+}
+
+
+/*------------MESSAGE------------*/
+.message{
+text-align: center;
+	width: 1200px;
+	margin:0 auto;
+}
+
+.messages .img{
+	float:left;
+	padding:0 30px;
+	height:400px;
+}
+.messages{
+	width: 1200px;
+	padding-bottom:50px;
+}
+.message .content{
+	text-align: left;
+}
+.messages::after{
+	display: none;
+	content:'';
+	clear:both;
+}
+.message .textm{
+	padding-bottom:30px;
+}
+
+
+/*------------FORM------------*/
+.form{
+	text-align: center;
+	margin: 0 auto;
+	background: #f7c04b;
+	padding:50px 0;
+}
+input,textarea{
+    width: 96%;
+    max-width: 960px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 50px;
+    margin: 30px auto;
+    border-radius: 5px;
+    border: none;
+    font-size:1.125rem;
+    display: block;
+}
+textarea{
+	padding:10px;
+}
+.form .btn{
+	max-width:960px;
+	color:white;
+	background:#da6b64;
+	padding:15px 0;
+	text-align: center;
+    border-radius: 5px;
+}
+.form .btn:hover{
+	background: #d84940;
+	cursor:pointer;
+}
+
+/*---------FAQ-----------*/
+.faq{
+	padding:50px 0;
+	text-align: center;
+	margin:0 auto;
+}
+.faq .textl{
+	padding-bottom:50px;
+}
+.QandA{
+	max-width: 960px;
+	padding-bottom: 5px;
+	margin:0 auto;
+	text-align: center;
+}
+.QandA .fa-question-circle{
+	color:#016ea9;
+}
+.QandA .q{
+	border: solid #E6E6E6 1px;
+	border-radius:5px;
+	text-align: left;
+	padding:10px 20px;
+	position:relative;
+}
+.QandA .q:hover{
+	cursor: pointer;
+}
+.q,.q p{
+	display: inline-block;
+	width:90%;
+}
+.q p:hover{
+	text-decoration:underline black;/*下線を引く*/
+}
+.fa-chevron-down{
+	padding-top:15px;
+	right:37px;
+	position:absolute;
+	vertical-align: middle;
+}
+.fa-chevron-down:hover{
+	cursor: pointer;
+}
+.QandA .answer{
+	font-weight: 600;
+	text-align: left;
+	line-height: 1.5;
+	padding:20px;
+}
+
+
+/*---------footer--------*/
+footer{
+	text-align: center;
+	background: lightgray;
 	padding:30px 0;
+}
+footer .btn_sns{
+	color: #fff;
+
+}
+small{
+	display: block;
+}
+
+
+/*----------MEDIA QUERY--------*/
+@media screen and (max-width: 960px){
+	
+	header .screen{
+		display:none;
+	}
+	header .sp{
+	display:block;
+	height:71px;
+	padding:0 10px;
+    border-radius:0px;
+	position:fixed;
+	right:0px;
+	top:0px;
+	font-size:12px;
+	text-decoration: none;
+	background: #da6b64;
+	color:white;
+	z-index: 10;
+	}
+	.menu{
+		display:block;
+	}
+	.sp i{
+		display: block;
+		font-size:30px;
+		text-align: center;
+		padding-top:10px;
+	}
+	.sp{
+		display: inline-block;
+	}
+	.type_a .items {
+	flex-wrap: wrap;
+	}
+	
+	.box{		
+		margin:0 4%;
+	}
+	.members{
+		display:block;
+		}
+
+	.member .item{
+		width:100%;
+	}	
+	.person {
+	display: block;
+	}
+	
+	.info{
+		margin-bottom: 20px;
+	}
+	h2::before,h2::after {
+    margin: 0 4%;
+}
 }
