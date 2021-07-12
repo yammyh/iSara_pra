@@ -3,6 +3,7 @@ body{
 	line-height: 2;
 	letter-spacing: 1.2px;
 	box-sizing: border-box;
+	font-family:  "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "MS PGothic", sans-serif;
 }
 header{
 	width: 100%;
@@ -50,6 +51,7 @@ header .screen{
     border-radius: 30px;
 	position:absolute;
 	right:0px;
+	text-decoration: none;
 }
 header .btn:hover{
 	cursor:pointer;
@@ -172,7 +174,7 @@ h2::before{
 	font-weight: 400;
 	margin-bottom:21px;
 }
-.howto span{
+.howto .orangeline{
 	font-weight: 700;
 	border-bottom:solid 5px #ebb94d;
 }
@@ -222,7 +224,7 @@ h2::before{
 	background:#fff;
 	border: solid #ebb94d;
 	border-radius: 10px;
-	padding:30px 0;
+	padding:30px 4%;
 	margin:0 auto;
 }
 
@@ -328,7 +330,7 @@ h2::before{
 	width:440px;
 	text-align: left;
 }
-.merit .box .textl{
+.merit p:first-child{
 	color:#ebb94d;
 }
 .merit p:nth-child(2){
@@ -516,7 +518,7 @@ h2::before{
 .why{
 	color:#fff;
 	text-align: left;
-	background: url( "img/why_bg.jpg") center bottom;
+	background: url(img/why_bg.jpg) center bottom no-repeat;
 	padding:80px;
 	margin-top:50px;
 }
@@ -526,7 +528,7 @@ h2::before{
 }
 /*--------benefit---------*/
 .benefit{
-	padding:50px 0;
+	padding:50px 4%;
 	text-align: center;
 	background: #f7c04b;
 }
@@ -599,24 +601,27 @@ h2::before{
 /*------------MESSAGE------------*/
 .message{
 text-align: center;
-	width: 1200px;
+	max-width: 890px;
 	margin:0 auto;
+}
+.messages{
+
+	padding-bottom:50px;
 }
 
 .messages .img{
-	float:left;
 	padding:0 30px;
-	height:400px;
+	box-sizing: border-box;
+	float:left;
 }
-.messages{
-	width: 1200px;
-	padding-bottom:50px;
-}
+
 .message .content{
+
 	text-align: left;
+	box-sizing: border-box;
 }
-.messages::after{
-	display: none;
+.message .img::after{
+	display: block;
 	content:'';
 	clear:both;
 }
@@ -733,20 +738,33 @@ small{
 	header .screen{
 		display:none;
 	}
-	header .sp{
-	display:block;
-	height:71px;
-	padding:0 10px;
-    border-radius:0px;
-	position:fixed;
-	right:0px;
-	top:0px;
-	font-size:12px;
-	text-decoration: none;
-	background: #da6b64;
-	color:white;
-	z-index: 10;
+	.header p {
+    font-size: 0.5rem;
 	}
+	.header{
+	position:relative;
+}
+	.header .sub-title{
+		padding-left: 4%;
+	}
+	.logo {
+    width: 130px;
+    display: inline-block;
+    padding-left: 4%;
+}
+	header .sp{
+	display: block;
+    padding: 0 14px;
+    border-radius: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 12px;
+    text-decoration: none;
+    background: #da6b64;
+    color: white;
+    height: 100%;
+}
 	.menu{
 		display:block;
 	}
@@ -758,6 +776,12 @@ small{
 	}
 	.sp{
 		display: inline-block;
+	}
+	.textl{
+	font-size:1.3rem;
+	}
+	.textm{
+	font-size:1rem;
 	}
 	.type_a .items {
 	flex-wrap: wrap;
@@ -776,11 +800,27 @@ small{
 	.person {
 	display: block;
 	}
-	
+	.flow-box {
+	   flex-flow: column;
+	}
+	.flow-box br{
+		display:none;
+	}
+	.left p {
+    width: 300px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto;
+}
+	.why{
+	background: url(img/why_bg.jpg) center top no-repeat;
+    padding: 4%;
+    background-size: cover;
+	}
 	.info{
 		margin-bottom: 20px;
 	}
 	h2::before,h2::after {
     margin: 0 4%;
-}
+	}
 }
