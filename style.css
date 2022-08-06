@@ -327,7 +327,7 @@ h2::before{
 	letter-spacing:1;
 }
 .explane{
-	width:440px;
+	max-width:440px;
 	text-align: left;
 }
 .merit p:first-child{
@@ -783,15 +783,15 @@ small{
 	.textm{
 	font-size:1rem;
 	}
-	.type_a .items {
+	.merit .type_a .items {
 	flex-wrap: wrap;
+	display: block;
 	}
+	
 	
 	h2::before,h2::after{
 		width: 20px;
     		height: 20px;
-    		border-bottom: solid 3px;
-    		border-right: solid 3px;
 	}
 	
 		
