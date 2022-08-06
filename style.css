@@ -450,7 +450,8 @@ h2::before{
 	vertical-align: top;
 	border-radius: 10px;
 	border: 5px solid #016ea9;
-	width: 450px;
+	max-width: 450px;
+    	min-width: 376px;
 	margin:10px auto;
 	background:#fff;
 }
@@ -541,7 +542,6 @@ h2::before{
 }
 
 .benefit .ttl{
-	width: 500px;
 	padding:0 50px;
 	margin-bottom: -30px;
 	 align-items: center;
@@ -732,7 +732,7 @@ small{
 }
 
 
-/*----------MEDIA QUERY--------*/
+/*--------------------------------------------------MEDIA QUERY------------------------------------------------*/
 @media screen and (max-width: 960px){
 	
 	header .screen{
@@ -787,6 +787,14 @@ small{
 	flex-wrap: wrap;
 	}
 	
+	h2::before,h2::after{
+		width: 20px;
+    		height: 20px;
+    		border-bottom: solid 3px;
+    		border-right: solid 3px;
+	}
+	
+		
 	.box{		
 		margin:0 4%;
 	}
