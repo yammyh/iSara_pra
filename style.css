@@ -802,6 +802,10 @@ small{
 	}
 	.flow-box {
 	   flex-flow: column;
+		margin-bottom:20px;
+	}
+	img.line{
+		display:none;
 	}
 	.flow-box br{
 		display:none;
